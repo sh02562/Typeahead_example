@@ -1,0 +1,17 @@
+
+<div class="center_div">
+    <p></p>
+    <p style="color:#3f51b5; font-weight:400;">Search Repository</p>
+
+    <input type="text" matInput [formControl]="myControl"
+    [matAutocomplete]="auto" (input)="repoSearch()">
+
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let repoValue of repoList" [value]="repoValue">
+          {{repoValue}}
+        </mat-option>
+      </mat-autocomplete>
+  
+      <h3>{{errorMsg}}</h3>
+  
+  </div>

@@ -1,0 +1,10 @@
+<div class="center_div">
+  <p></p>
+    <p style="color: #007bff; font-weight:400;" >Search Repository</p>
+    <input type="text" class="form-control"  [formControl]="repoTextInput"
+     (input)="repoSearch()" [typeahead]="repoList">
+  
+      <h3>{{errorMsg}}</h3>
+  
+     
+  </div>

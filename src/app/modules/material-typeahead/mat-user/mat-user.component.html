@@ -1,0 +1,17 @@
+
+<div class="center_div">
+    <p></p>
+    <p style="color:#3f51b5; font-weight:400;">Search User</p>
+
+    <input type="text" matInput [formControl]="myControl"
+    [matAutocomplete]="auto" (input)="userSearch()">
+
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let userValue of userList" [value]="userValue">
+          {{userValue}}
+        </mat-option>
+      </mat-autocomplete>
+  
+      <h3>{{errorMsg}}</h3>
+  
+  </div>

@@ -1,0 +1,9 @@
+<div class="center_div">
+  <p></p>
+  <p style="color: #007bff; font-weight:400;" >Search User</p>
+  <input type="text" class="form-control" [formControl]="userTextInput" 
+  (input)="userSearch()" [typeahead]="userList">
+
+    <h3>{{errorMsg}}</h3>
+
+</div>
